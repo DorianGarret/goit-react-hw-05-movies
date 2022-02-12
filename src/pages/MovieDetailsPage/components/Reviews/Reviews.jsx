@@ -4,7 +4,6 @@ import { Author, Content, List } from './Reviews.styled';
 
 export const Reviews = () => {
   const { reviews } = useContext(MovieDetailsContext);
-  console.log(reviews);
   return (
     <List>
       {!reviews.length ? (
