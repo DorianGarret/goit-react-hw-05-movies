@@ -3,9 +3,10 @@ import { Container } from 'components/Container';
 import { NavigationBar } from 'components/NavigationBar';
 import { HomePage } from 'pages/HomePage';
 import { MovieDetailsPage } from 'pages/MovieDetailsPage';
-import { Main } from './App.styled';
 import { Cast } from 'pages/MovieDetailsPage/components/Cast';
 import { Reviews } from 'pages/MovieDetailsPage/components/Reviews';
+import { MoviesPage } from 'pages/MoviesPage/MoviesPage';
+import { Main } from './App.styled';
 
 export const App = () => {
   return (
@@ -18,7 +19,7 @@ export const App = () => {
         <Main>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/movies" element={<div>Movies</div>} />
+            <Route path="/movies" element={<MoviesPage />} />
             <Route path="/movies/:movieId" element={<MovieDetailsPage />}>
               <Route path="cast" element={<Cast />} />
               <Route path="reviews" element={<Reviews />} />
